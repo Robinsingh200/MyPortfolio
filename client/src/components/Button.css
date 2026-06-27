@@ -1,0 +1,38 @@
+.btn {
+  padding: 0.7rem 2rem;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-full { width: 100%; justify-content: center; }
+
+.btn-primary {
+  background: var(--coral);
+  color: white;
+  border-color: var(--coral);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--coral-dark);
+  border-color: var(--coral-dark);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--coral);
+  border-color: var(--coral);
+}
+.btn-outline:hover:not(:disabled) {
+  background: var(--coral);
+  color: white;
+}
+
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }

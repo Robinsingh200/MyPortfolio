@@ -1,0 +1,13 @@
+{
+  "name": "mern-portfolio",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "build": "cd client && npm run build",
+    "seed": "cd server && node seed.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

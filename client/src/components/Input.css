@@ -1,0 +1,19 @@
+.input-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.2rem; }
+
+.input-label { font-size: 0.85rem; font-weight: 500; color: var(--navy); }
+
+.input-field {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: var(--navy);
+  background: white;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.input-field:focus { border-color: var(--coral); }
+.input-field.input-error { border-color: #ef4444; }
+.input-error-msg { font-size: 0.78rem; color: #ef4444; }

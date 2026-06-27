@@ -1,0 +1,92 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.2rem 0;
+  transition: background 0.3s, box-shadow 0.3s;
+  background: rgba(253, 248, 247, 0.95);
+}
+
+.navbar-scrolled {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  backdrop-filter: blur(8px);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo-circle {
+  width: 40px; height: 40px;
+  background: var(--coral);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 700; font-size: 1.1rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--navy);
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 0; height: 2px;
+  background: var(--coral);
+  transition: width 0.25s;
+}
+
+.nav-links a:hover { color: var(--coral); }
+.nav-links a:hover::after { width: 100%; }
+
+.navbar-right { display: flex; align-items: center; gap: 1rem; }
+
+.nav-user { font-size: 0.85rem; color: var(--gray); }
+
+.btn-hire {
+  background: var(--coral);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.4rem;
+  border-radius: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-hire:hover { background: var(--coral-dark); }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; }
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px; left: 0; right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    gap: 1.2rem;
+  }
+  .nav-links.open { display: flex; }
+}
