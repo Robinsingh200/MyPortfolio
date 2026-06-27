@@ -21,19 +21,5 @@ pipeline {
           }
        }
 
-        stage('Deploy') {
-            steps {
-                sh '''
-                docker stop $CONTAINER || true
-                docker rm $CONTAINER || true
-
-                docker run -d \
-                    --name $CONTAINER \
-                    -p 80:3000 \
-                    $IMAGE
-                '''
-            }
-        }
-
     }
 }
