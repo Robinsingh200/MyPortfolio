@@ -15,11 +15,11 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                sh 'docker build -t $IMAGE .'
-            }
-        }
+        stage('Build') {
+          steps {
+            sh 'docker compose build'
+          }
+       }
 
         stage('Deploy') {
             steps {
